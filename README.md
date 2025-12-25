@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# System Monitor Dashboard 🖥️_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A retro-futuristic terminal dashboard web application built with **React** and **TypeScript**. This project simulates a system monitoring interface with a "hacker" aesthetic, featuring a functional terminal emulator, real-time system statistics, and dynamic process tracking.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Terminal Emulator**: A command-line interface where you can type commands, view history, and receive outputs. Type `help` to see what you can do!
+- **Real-time System Monitoring**: Visualizes simulated CPU, RAM, and Disk usage with dynamic updates.
+- **Process Manager**: detailed list of active "processes" with fluctuating resource consumption.
+- **Customizable Layout**: Toggle visibility of different dashboard panels and the terminal window itself.
+- **Theming**: Switch between Dark 🌙 and Light ☀️ modes (though we all know a real hacker uses dark mode).
+- **Immersive Experience**: Context menu disabled for a more authentic app-like feel.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (Latest LTS recommended)
+- npm or pnpm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd system-monitor-web
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   pnpm dev
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4. **Open in Browser**
+   Navigate to `http://localhost:5173` to view the dashboard.
+
+## 🎮 Usage
+
+Once the application is running, you can interact with the dashboard:
+
+- **Terminal**: Click on the terminal area to focus. Type commands like `help`, `clear`, or others to interact.
+- **Panels**: Use the UI controls (if available) or terminal commands to toggle the `stats` and `processes` panels.
+- **Theme**: Toggle the theme to fit your environment.
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
